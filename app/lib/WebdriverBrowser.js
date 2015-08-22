@@ -743,6 +743,12 @@ Browser.prototype = {
                 }.bind(this));
             }.bind(this));
         }.bind(this));
+    },
+
+    selectFrame: function(name, next) {
+      this.driver.switchTo().defaultContent();
+      this.driver.switchTo().frame(name);
+      this.then(next);
     }
 }
 
