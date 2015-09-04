@@ -62,6 +62,7 @@
     commander.option('-p, --profile [name]', 'webdriver profile, ex: --profile remote');
     commander.option('-b, --browser [name]', 'webdriver browser name, ex: --browser chrome');
     commander.option('--require [dir]', 'cucumber require option (custom world dir), ex: --require api');
+    commander.option('-f --format [name]', 'Specify console format. EX: --format progress');
 
 
     commander

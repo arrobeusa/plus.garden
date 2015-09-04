@@ -82,6 +82,11 @@
             cmd += ' --tags ' + commander.tags;
         }
 
+        var format = 'pretty';
+        if (commander.format) {
+          format = commander.format;
+        }
+
         if (name) {
 
             var requireDir  = require('underscore')(name.replace('\\', '/').split('/')).first();
@@ -90,7 +95,7 @@
             cmd += ' --require ' + requireDir;
         }
 
-        cmd += ' --format pretty ' + name;
+        cmd += ' --format ' + format + ' ' + name;
 
         wait.forMethod(command, 'run', cmd);
 
